@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <div>1st number: <input type="text" v-model="numberOne"></div>
+    <div>2nd number: <input type="text" v-model="numberTwo"></div>
+    <div>3rd number: <input type="text" v-model="numberThree"></div>
+    <div><button v-on:click="computeSum()">Compute sum</button></div>
+    <p>The sum is: {{ sum }}</p>
+    <div><button v-on:click="computeSubtract()">Compute sum</button></div>
+    <p>The sum is: {{ sum }}</p> 
+    <!-- To just do this on command without clickinb the button just replace sum with computeSum -->
+  </div>
+</body>
+</html>

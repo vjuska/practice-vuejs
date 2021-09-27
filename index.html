@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+    
+    <div id="app">
+      <p>{{ message }}</p>
+      <p v-if="true"> THIS IS RANDOM TEXT BLAH BLAH BLAH</p>
+      <p>Name: {{ name }}</p>
+      <input v-model="message">
+      <p><button v-on:click="reverseMessage">Reverse Message</button></p>
+      <p><button v-on:click="changeMessage()">Click Me</button></p>
+      <div>
+        <h3>Fruits</h3>
+        <div><ol><li v-for="fruit in fruits">
+          <p>This fruit has a name of:</p>
+          <h5>{{ fruit }}</h5>
+        </li></ol>
+        </div>
+        <div>
+          <input type="text" v-model="newFruit" />
+          <button v-on:click="addNewFruit()">Add new fruit</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+
+ 
+  </body>
+</html>
